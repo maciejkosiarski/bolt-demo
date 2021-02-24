@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^bolt.kosiarski.pl$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.bolt.kosiarski.pl$
+RewriteCond %{REQUEST_URI} !^/?public/
+RewriteRule (.*) /public/$1 [L]
